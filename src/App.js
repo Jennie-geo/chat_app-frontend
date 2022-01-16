@@ -1,25 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import style from 'styled-components';
+import Body from './components/Member/Body'
+import JoinChatGroup from './components/JoinGroupPage/JoinChatBody';
+import Header from './components/Member/Header';
+import ChatHeader from './components/JoinGroupPage/ChatHeader';
+import Signup from './components/Signup/Signup';
+import Login from './components/Login/Login';
+import PersonalInfo from './components/PersonalInfo/PersonalInfo';
+//import Footer from './components/Member/Footer';
+
+//import Signup from './components/Signup/Signup';
+//import ChatHeader from "./ChatHeader"
+// import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Wrapper>
+        <Header />
+        <Body />
+      </Wrapper>
+
     </div>
   );
 }
 
-export default App;
+function ChatGroup() {
+  return (
+    <div>
+      <Overall>
+        <ChatHeader />
+        <JoinChatGroup />
+      </Overall>
+
+    </div>
+  )
+}
+
+function SignupApp() {
+  return (
+    <div>
+      <Signup />
+    </div>
+  )
+}
+
+function LoginApp() {
+  return (
+    <div>
+      <Login />
+    </div>
+  )
+}
+
+function PersonalProfile() {
+  return (
+    <div>
+      <PersonalInfo />
+    </div>
+  )
+}
+
+const Wrapper = style.div`
+ background: 'black';
+`
+const Overall = style.div`
+margin: 7rem 25rem;
+height: 70vh;
+width: 40%;
+background: #999993;
+border-radius: 15px;
+
+`
+export { App, ChatGroup, LoginApp, SignupApp, PersonalProfile };
