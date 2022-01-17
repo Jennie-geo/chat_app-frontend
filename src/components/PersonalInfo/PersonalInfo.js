@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import User from '../User'
 import './PersonalInfo.css';
 
 const PersonalInfo = ({ photo, name, bio, phone, email, password }) => {
+
     return (
         <>
             <div className='body'>
@@ -14,7 +16,7 @@ const PersonalInfo = ({ photo, name, bio, phone, email, password }) => {
                 <div className='user_info'>
                     <div className='profile_header'>
                         <div>{name} Profile</div>
-                        <div><Link to="/editprofile" style={{ textDecoration: 'none', fontSize: '18px', width: '25rem', height: '10rem', borderRadius: '5px', background: '#e0e0e0', padding: '5px', color: 'black' }}>Edit</Link></div>
+                        <div><Link to="/edit" style={{ textDecoration: 'none', fontSize: '18px', width: '25rem', height: '10rem', borderRadius: '5px', background: '#e0e0e0', padding: '5px', color: 'black' }}>Edit</Link></div>
                     </div>
                     <div className="userDetail">
                         <div>PHOTO </div>
