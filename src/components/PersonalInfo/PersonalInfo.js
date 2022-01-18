@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 import User from '../User'
 import './PersonalInfo.css';
 
@@ -7,16 +8,19 @@ const PersonalInfo = ({ photo, name, bio, phone, email, password }) => {
 
     return (
         <>
+
             <div className='body'>
-                <div style={{ marginRight: '8px' }}>{photo} image</div>
-                <div> {name} name</div>
+                <div style={{ marginRight: '1rem' }}>{photo} myphoto</div>
+                <div>{name} myname </div>
+                <div className='icon'>{<ArrowDropDownOutlinedIcon />}
+                </div>
             </div>
             <div className='profileInfo'>
                 <div className='title_info'>Personal info</div>
                 <div className='user_info'>
                     <div className='profile_header'>
                         <div>{name} Profile</div>
-                        <div><Link to="/edit" style={{ textDecoration: 'none', fontSize: '18px', width: '25rem', height: '10rem', borderRadius: '5px', background: '#e0e0e0', padding: '5px', color: 'black' }}>Edit</Link></div>
+                        <div><Link to="/edit" style={{ textDecoration: 'none', fontSize: '18px', width: '15rem', height: '7rem', borderRadius: '5px', background: '#2f80ed', padding: '0.7rem', color: 'black' }}>Edit</Link></div>
                     </div>
                     <div className="userDetail">
                         <div>PHOTO </div>

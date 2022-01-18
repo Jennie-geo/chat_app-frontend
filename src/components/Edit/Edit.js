@@ -7,11 +7,10 @@ const Edit = ({ name, photo, email, phone }) => {
     return (
         <div >
             <div className='profileIcon'>
-                <div style={{ marginRight: '1rem' }}>{photo} myphoto</div>
-                <div>{name} myname </div>
-                <div className='icon'>{<ArrowDropDownOutlinedIcon />}
-                </div>
+                <div style={{ marginRight: '8px' }}>{photo} image</div>
+                <div> {name} name</div>
             </div>
+
             <div className='editPersonalProfile'>
                 <div style={{ fontSize: '30px', marginBottom: '2rem' }}>Change Infor</div>
                 <div className='img' style={{ marginBottom: '3rem' }}>{photo} change photo</div>

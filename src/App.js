@@ -7,11 +7,12 @@ import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
 import PersonalInfo from './components/PersonalInfo/PersonalInfo';
 import Edit from './components/Edit/Edit'
-//import Footer from './components/Member/Footer';
+// import { useState, useEffect } from "react";
+// import io from 'socket.io';
+// import {nanoid} from 'nanoid';
 
-//import Signup from './components/Signup/Signup';
-//import ChatHeader from "./ChatHeader"
-// import './App.css';
+//no dotenv
+// const socket = io('http://localhost:8887')
 
 function App() {
   return (

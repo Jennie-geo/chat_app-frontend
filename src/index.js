@@ -14,7 +14,7 @@ ReactDOM.render(
         <Route exact path="/login" element={<LoginApp />} />
         <Route exact path="/personalInfo" element={<PersonalProfile />} />
         <Route exact path="/edit" element={<EditPage />} />
-        <Route exact path="/" element={<ChatGroup />} />
+        <Route exact path="/joinGroup" element={<ChatGroup />} />
         <Route exact path="/chat_room" element={<App />} />
       </Routes>
     </Router>
