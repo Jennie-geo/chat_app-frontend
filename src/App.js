@@ -69,6 +69,7 @@ function EditPage() {
   )
 }
 
+
 const Wrapper = style.div`
  background: 'black';
 `

@@ -1,14 +1,12 @@
 import styled from 'styled-components'
-import GroupMembers from './GroupMembers'
+// import GroupMembers from './GroupMembers'
 import GroupName from './GroupName'
 import Footer from './Footer';
 import io from 'socket.io-client';
 import { useEffect, useState } from 'react';
-import User from '../User'
 import { nanoid } from 'nanoid';
 const socket = io('http://localhost:8887');
 const userName = nanoid(4)
-//import Header from './Header';
 
 const Body = ({ name }) => {
     const [chat, setChat] = useState([])
@@ -21,17 +19,12 @@ const Body = ({ name }) => {
     return (
         <div>
             <FullBody>
-                {/* <Header /> */}
-                <Left>Left part of the chat
+                <Left>
                     <GroupName />
-                    <GroupMembers />
                 </Left>
                 <Right>
-                    <h1>Right part of the chat</h1>
-
                     {chat.map((payload, index) => {
-                        return <p key={index}>{payload.message}: <Span><span>ids: {payload.userName}</span></Span> </p>
-
+                        return <p style={{ width: "60%", height: "3vh", background: "#cbced4", marginLeft: "2rem", padding: "1rem", borderRadius: "4px", border: "none" }} key={index}>{payload.message} <Span><span>id: {payload.userName}</span></Span> </p>
                     })}
                 </Right>
             </FullBody>
@@ -39,12 +32,10 @@ const Body = ({ name }) => {
         </div>
     )
 }
+
 const FullBody = styled.div`
 display: flex;
 height: 55vh
-
-
-
 `
 const Left = styled.div`
 width: 30%;
@@ -54,13 +45,13 @@ background: #eeeee8;
 `
 const Right = styled.div`
 background: #eeeef8;
-width: 60%;
+width: 70%;
 color: black;
 height: 55vh;
-scroll
+overflow: scroll;
 `
 const Span = styled.span`
 padding: 5px 15px;
-background: orange
+color: orange;
 `
 export default Body

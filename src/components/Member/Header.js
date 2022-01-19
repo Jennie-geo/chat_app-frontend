@@ -1,12 +1,14 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 const Header = () => {
+
     return (
         <div>
             <Head>
                 <h1>Chat Group</h1>
                 <Logout>
-                    Leave Room
+                    <Link to="/joinGroup" value='leaveRoom' style={{ textDecoration: "none", color: "silver" }}>Leave Room</Link>
                 </Logout>
             </Head>
         </div>
@@ -30,6 +32,7 @@ cursor: pointer;
 border-radius: 5px;
 padding: 5px;
 opacity: 0.5;
+
 
 
 `
