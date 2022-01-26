@@ -5,15 +5,8 @@ import Header from './components/Member/Header';
 import ChatHeader from './components/JoinGroupPage/ChatHeader';
 import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
-import User from '../src/components/User'
 import PersonalInfo from './components/PersonalInfo/PersonalInfo';
 import Edit from './components/Edit/Edit'
-// import { useState, useEffect } from "react";
-// import io from 'socket.io';
-// import {nanoid} from 'nanoid';
-
-//no dotenv
-// const socket = io('http://localhost:8887')
 
 function App() {
   return (

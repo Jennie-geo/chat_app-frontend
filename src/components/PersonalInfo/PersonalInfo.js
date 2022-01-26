@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
+import { BrowserRouter as Router } from 'react-router-dom';
 import User from '../User'
 import './PersonalInfo.css';
 
 const PersonalInfo = (props) => {
-    let userIn = User.map(user => console.log(user))
     return (
         <>
             {User.map((user) => (
@@ -24,7 +24,7 @@ const PersonalInfo = (props) => {
 
                             <div className='profile_header'>
                                 <div>Welcome {user.firstName}.</div>
-                                <div><Link to="/edit" style={{ textDecoration: 'none', fontSize: '18px', width: '15rem', height: '7rem', borderRadius: '5px', background: '#2f80ed', padding: '0.7rem', color: 'black' }}>Edit</Link></div>
+                                <Router> <div><Link to="/edit" style={{ textDecoration: 'none', fontSize: '18px', width: '15rem', height: '7rem', borderRadius: '5px', background: '#2f80ed', padding: '0.7rem', color: 'black' }}>Edit</Link></div> </Router>
                             </div>
                             {/* <div className="userDetail">
                                 <div>PHOTO </div>

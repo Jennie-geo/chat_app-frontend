@@ -100,34 +100,9 @@ const User = [
         "bio": "Nothing matters to because i love money",
         "phone": "08078765454"
     }
-    // {
-    //     "id": 11,
-    //     "first_name": "Chuck",
-    //     "last_name": "Corneliussen",
-    //     "email": "ccorneliussena@google.fr",
-    //     "gender": "Female",
-    //     "group room": "admin",
-    //     "ip_address": "23.40.130.45"
-    // }, {
-    //     "id": 12,
-    //     "first_name": "Bail",
-    //     "last_name": "Blackadder",
-    //     "email": "bblackadderb@state.gov",
-    //     "gender": "Female",
-    //     "group room": "marketing",
-    //     "ip_address": "252.251.217.71"
-    // }, {
-    //     "id": 13,
-    //     "first_name": "Emilia",
-    //     "last_name": "McCloud",
-    //     "email": "emccloudc@cbslocal.com",
-    //     "gender": "Male",
-    //     "group room": "design",
-    //     "ip_address": "176.28.238.162"
-    // },
 ]
-
 export default User;
+
 
 // {
 //     "id": 11,

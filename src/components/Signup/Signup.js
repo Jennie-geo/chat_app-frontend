@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { AccessAlarm, LightMode, ThreeDRotation } from '@mui/icons-material';
 import MailIcon from '@mui/icons-material/Mail';
 import LockIcon from '@mui/icons-material/Lock';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { TextField } from '@mui/material';
 import './Signups.css';
 import { Link } from 'react-router-dom';
@@ -88,9 +89,11 @@ const Signup = () => {
                     <div>
                         <TextField id="outlined-basic" label="Password" variant="outlined" style={{ width: '20rem', height: '4vh', margin: '2rem 3rem 1rem 3rem', borderRadius: '7px' }} value={password} type="password" InputProps={{ endAdornment: (<LockIcon />) }} onChange={handlePassword} />
                     </div>
-                    <div>
-                        <Link to='/login' onClick={handleSubmit} style={{ textDecoration: 'none' }}><h3 style={{ marginLeft: '12rem' }}>SignUp</h3></Link>
-                    </div>
+                    <Router>
+                        <div>
+                            <Link to='/login' onClick={handleSubmit} style={{ textDecoration: 'none' }}><h3 style={{ marginLeft: '12rem' }}>SignUp</h3></Link>
+                        </div>
+                    </Router>
                     <Social>
                         <div>or continue with social profile</div>
                         <FontAwesomeIcon icon={faGoogle} style={{ marginLeft: '1.5rem', fontSize: '1.5rem', cursor: 'pointer' }} />
