@@ -9,16 +9,14 @@
 }
 .error {
   display: block;
-  background-color: red;
-  color: white;
+  color: red;
   width: fit-content;
   height: 50px;
   padding: 5px;
 }
 .success {
   display: block;
-  background-color: lightblue;
-  color: black;
+  color: green;
   width: fit-content;
   height: 50px;
   padding: 5px;

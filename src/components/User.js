@@ -1,110 +1,130 @@
 const User = [
     {
         "id": 1,
-        "first_name": "Neils",
-        "last_name": "Spellsworth",
+        "firstName": "Neils",
+        "lastName": "Spellsworth",
         "email": "nspellsworth0@youku.com",
         "gender": "Male",
-        "group room": "front-end",
-        "ip_address": "94.160.187.218"
+        "groupRoom": "front-end",
+        "ip_address": "94.160.187.218",
+        "bio": "I love eating",
+        "phone": "08078765454"
     }, {
         "id": 2,
-        "first_name": "Tomi",
-        "last_name": "Chessun",
+        "firstName": "Tomi",
+        "lastName": "Chessun",
         "email": "tchessun1@cornell.edu",
         "gender": "Female",
         "group room": "front-end",
-        "ip_address": "198.12.181.190"
+        "ip_address": "198.12.181.190",
+        "bio": "I love cooking",
+        "phone": "08078765454"
     }, {
         "id": 3,
-        "first_name": "Brigitte",
-        "last_name": "O'Bruen",
+        "firstName": "Brigitte",
+        "lastName": "O'Bruen",
         "email": "bobruen2@noaa.gov",
         "gender": "Male",
         "group room": "back-end",
-        "ip_address": "237.183.65.88"
+        "ip_address": "237.183.65.88",
+        "bio": "I love dancing",
+        "phone": "08078765454"
     }, {
         "id": 4,
-        "first_name": "Grata",
-        "last_name": "Kelsow",
+        "firstName": "Grata",
+        "lastName": "Kelsow",
         "email": "gkelsow3@amazon.com",
         "gender": "Female",
         "group room": "front-end",
-        "ip_address": "123.152.37.57"
+        "ip_address": "123.152.37.57",
+        "bio": "I love swimming",
+        "phone": "08078765454"
     }, {
         "id": 5,
-        "first_name": "Hew",
-        "last_name": "Oxberry",
+        "firstName": "Hew",
+        "lastName": "Oxberry",
         "email": "hoxberry4@hp.com",
         "gender": "Female",
         "group room": "front-end",
-        "ip_address": "192.250.161.117"
+        "ip_address": "192.250.161.117",
+        "bio": "I love praying",
+        "phone": "08078765454"
     }, {
         "id": 6,
-        "first_name": "Buiron",
-        "last_name": "Andrag",
+        "firstName": "Buiron",
+        "lastName": "Andrag",
         "email": "bandrag5@loc.gov",
         "gender": "Male",
         "group room": "design",
-        "ip_address": "79.160.197.14"
+        "ip_address": "79.160.197.14",
+        "bio": "I love meditating",
+        "phone": "08078765454"
     }, {
         "id": 7,
-        "first_name": "Rosamund",
-        "last_name": "Pina",
+        "firstName": "Rosamund",
+        "lastName": "Pina",
         "email": "rpina6@reddit.com",
         "gender": "Male",
         "group room": "account",
-        "ip_address": "81.38.18.87"
+        "ip_address": "81.38.18.87",
+        "bio": "I love visiting",
+        "phone": "08078765454"
     }, {
         "id": 8,
-        "first_name": "Candide",
-        "last_name": "Aumerle",
+        "firstName": "Candide",
+        "lastName": "Aumerle",
         "email": "caumerle7@bigcartel.com",
         "gender": "Female",
         "group room": "devops",
-        "ip_address": "163.111.140.214"
+        "ip_address": "163.111.140.214",
+        "bio": "I love self",
+        "phone": "08078765454"
     }, {
         "id": 9,
-        "first_name": "Anthiathia",
-        "last_name": "Odam",
+        "firstName": "Anthiathia",
+        "lastName": "Odam",
         "email": "aodam8@deviantart.com",
         "gender": "Female",
         "group room": "customer_care",
-        "ip_address": "160.32.220.116"
+        "ip_address": "160.32.220.116",
+        "bio": "Yea! I love me",
+        "phone": "08078765454"
     }, {
         "id": 10,
-        "first_name": "Benedicto",
-        "last_name": "Bourbon",
+        "firstName": "Benedicto",
+        "lastName": "Bourbon",
         "email": "bbourbon9@goo.gl",
         "gender": "Male",
         "group room": "devops",
-        "ip_address": "173.98.168.92"
-    },
-    {
-        "id": 11,
-        "first_name": "Chuck",
-        "last_name": "Corneliussen",
-        "email": "ccorneliussena@google.fr",
-        "gender": "Female",
-        "group room": "admin",
-        "ip_address": "23.40.130.45"
-    }, {
-        "id": 12,
-        "first_name": "Bail",
-        "last_name": "Blackadder",
-        "email": "bblackadderb@state.gov",
-        "gender": "Female",
-        "group room": "marketing",
-        "ip_address": "252.251.217.71"
-    }, {
-        "id": 13,
-        "first_name": "Emilia",
-        "last_name": "McCloud",
-        "email": "emccloudc@cbslocal.com",
-        "gender": "Male",
-        "group room": "design",
-        "ip_address": "176.28.238.162"
-    },
+        "ip_address": "173.98.168.92",
+        "bio": "Nothing matters to because i love money",
+        "phone": "08078765454"
+    }
+    // {
+    //     "id": 11,
+    //     "first_name": "Chuck",
+    //     "last_name": "Corneliussen",
+    //     "email": "ccorneliussena@google.fr",
+    //     "gender": "Female",
+    //     "group room": "admin",
+    //     "ip_address": "23.40.130.45"
+    // }, {
+    //     "id": 12,
+    //     "first_name": "Bail",
+    //     "last_name": "Blackadder",
+    //     "email": "bblackadderb@state.gov",
+    //     "gender": "Female",
+    //     "group room": "marketing",
+    //     "ip_address": "252.251.217.71"
+    // }, {
+    //     "id": 13,
+    //     "first_name": "Emilia",
+    //     "last_name": "McCloud",
+    //     "email": "emccloudc@cbslocal.com",
+    //     "gender": "Male",
+    //     "group room": "design",
+    //     "ip_address": "176.28.238.162"
+    // },
 ]
 
 export default User;
