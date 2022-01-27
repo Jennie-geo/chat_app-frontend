@@ -6,12 +6,12 @@ import { BrowserRouter as Router, Routes, Route, NavLink, Link } from 'react-rou
 const Apps = () => {
     const [token, setToken] = useState()
     if (!token) {
-        return (
-            <><div>
-                {/* <SignupApp setToken={setToken} /> */}
-                <LoginApp setToken={setToken} />
-            </div></>
-        )
+        // return (
+        //     <><div>
+        //         {/* <SignupApp setToken={setToken} /> */}
+        //         <LoginApp setToken={setToken} />
+        //     </div></>
+        // )
 
     }
 

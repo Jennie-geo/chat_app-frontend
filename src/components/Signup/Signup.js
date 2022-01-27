@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { AccessAlarm, LightMode, ThreeDRotation } from '@mui/icons-material';
 import MailIcon from '@mui/icons-material/Mail';
 import LockIcon from '@mui/icons-material/Lock';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { TextField } from '@mui/material';
+import SignupUser from '../SignupUser/SignupUser';
 import './Signups.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,6 +20,17 @@ const Signup = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const handleSignup = async (e) => {
+        e.preventDefault()
+        const registerUser = await SignupUser({
+            name: name,
+            email: email,
+            password: password
+        })
+        registerUser.save().then(response => console.log(response))
+            .catch(err => console.log(err))
+    }
 
     //state for success or errror message
     const [submitted, setSubmitted] = useState(false);
@@ -67,14 +78,14 @@ const Signup = () => {
         return (
             <div className='error'
                 style={{ display: error ? '' : 'none' }}>
-                <p>Please, fill in all the fields.</p>
+                <h5>Please, fill in all the fields.</h5>
             </div>
         )
     }
 
     return (
         <Fragment>
-            <form action="/login" method='post' style={{ padding: '3rem' }}>
+            <form action="/login" method='post' style={{ padding: '3rem' }} onSubmit={handleSignup}>
                 <Header>
                     <div className='messages'>
                         {successMessage()}
