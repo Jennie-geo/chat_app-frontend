@@ -4,16 +4,16 @@ import { App, ChatGroup, LoginApp, SignupApp, PersonalProfile, EditPage } from '
 import { BrowserRouter as Router, Routes, Route, NavLink, Link } from 'react-router-dom';
 
 const Apps = () => {
-    const [token, setToken] = useState()
-    if (!token) {
-        // return (
-        //     <><div>
-        //         {/* <SignupApp setToken={setToken} /> */}
-        //         <LoginApp setToken={setToken} />
-        //     </div></>
-        // )
+    // const [token, setToken] = useState()
+    // if (!token) {
+    //     return (
+    //         <><div>
+    //             {/* <SignupApp setToken={setToken} /> */}
+    //             <LoginApp setToken={setToken} />
+    //         </div></>
+    //     )
 
-    }
+    // }
 
     return (
         <Routes>

@@ -4,7 +4,7 @@ import { AccessAlarm, LightMode, ThreeDRotation } from '@mui/icons-material';
 import MailIcon from '@mui/icons-material/Mail';
 import LockIcon from '@mui/icons-material/Lock';
 import { TextField } from '@mui/material';
-import SignupUser from '../SignupUser/SignupUser';
+//import SignupUser from '../context/authContext';
 import './Signups.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -23,13 +23,13 @@ const Signup = () => {
 
     const handleSignup = async (e) => {
         e.preventDefault()
-        const registerUser = await SignupUser({
-            name: name,
-            email: email,
-            password: password
-        })
-        registerUser.save().then(response => console.log(response))
-            .catch(err => console.log(err))
+        // const registerUser = await SignupUser({
+        //     name: name,
+        //     email: email,
+        //     password: password
+        // })
+        // registerUser.save().then(response => console.log(response))
+        //     .catch(err => console.log(err))
     }
 
     //state for success or errror message
