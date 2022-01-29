@@ -20,13 +20,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 export default function Login({ setToken }) {
-    // const Login = ({setToken}) => {
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault()
-    //     const token = await LoginUser({ email, password });
-    //     console.log(token)
-    //     setToken(token);
-    // }
     const { setAuthState } = useContext(AuthContext);
     const [errorMessage, setErrorMessage] = useState('');
     const [state, setState] = useState({
@@ -89,9 +82,6 @@ export default function Login({ setToken }) {
         </div >
     )
 }
-// Login.propTypes = {
-//     setToken: PropTypes.func.isRequired
-// }
 
 const Logins = styled.div`
  background: #eeeef8;

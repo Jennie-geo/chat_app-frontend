@@ -4,10 +4,10 @@ import { AccessAlarm, LightMode, ThreeDRotation } from '@mui/icons-material';
 import MailIcon from '@mui/icons-material/Mail';
 import LockIcon from '@mui/icons-material/Lock';
 import { TextField } from '@mui/material';
-//import SignupUser from '../context/authContext';
 import './Signups.css';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { AuthContext } from '../context/authContext';
 import {
     faGoogle,
     faFacebook,
@@ -15,94 +15,112 @@ import {
     faGithub
 } from '@fortawesome/free-brands-svg-icons'
 
+
 const Signup = () => {
+
+    const { setAuthState } = useNavigate(AuthContext);
+    const [errorMessage, setErrorMessage] = useState('')
+    const [state, setState] = useState({
+        name: '',
+        email: '',
+        password: ''
+    })
+
+    const isInvalid = state.name === '' || state.email === '' || state.password === '';
+
+    const updateState = (key, value) => {
+        setState({
+            ...state,
+            [key]: value
+        })
+    }
     //state for user registration
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    // const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
 
-    const handleSignup = async (e) => {
-        e.preventDefault()
-        // const registerUser = await SignupUser({
-        //     name: name,
-        //     email: email,
-        //     password: password
-        // })
-        // registerUser.save().then(response => console.log(response))
-        //     .catch(err => console.log(err))
-    }
+    // const handleSignup = async (e) => {
+    //     e.preventDefault()
+    //     // const registerUser = await SignupUser({
+    //     //     name: name,
+    //     //     email: email,
+    //     //     password: password
+    //     // })
+    //     // registerUser.save().then(response => console.log(response))
+    //     //     .catch(err => console.log(err))
+    // }
 
-    //state for success or errror message
-    const [submitted, setSubmitted] = useState(false);
-    const [error, setError] = useState(false);
+    // //state for success or errror message
+    // const [submitted, setSubmitted] = useState(false);
+    // const [error, setError] = useState(false);
 
-    //handle name change
-    const handleName = (e) => {
-        setName(e.target.value)
-        setSubmitted(false)
-    }
+    // //handle name change
+    // const handleName = (e) => {
+    //     setName(e.target.value)
+    //     setSubmitted(false)
+    // }
 
-    //handle email change
-    const handleEmail = (e) => {
-        setEmail(e.target.value)
-        setSubmitted(false)
-    }
+    // //handle email change
+    // const handleEmail = (e) => {
+    //     setEmail(e.target.value)
+    //     setSubmitted(false)
+    // }
 
-    //handle password change
-    const handlePassword = (e) => {
-        setPassword(e.target.value)
-        setSubmitted(false)
-    }
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        if (name === '' || email === '' || password === '') {
-            setError(true)
-        } else {
-            setSubmitted(true)
-            setError(false);
-        }
-    }
-    //show success message
-    const successMessage = () => {
-        return (
-            <div className='success'
-                style={{
-                    display: submitted ? '' : 'none'
-                }}>
-                <h5>Welcome {name}, you have successfully SignUp.</h5>
-            </div>
-        )
-    }
-    //show error message
-    const errorMessage = () => {
-        return (
-            <div className='error'
-                style={{ display: error ? '' : 'none' }}>
-                <h5>Please, fill in all the fields.</h5>
-            </div>
-        )
-    }
+    // //handle password change
+    // const handlePassword = (e) => {
+    //     setPassword(e.target.value)
+    //     setSubmitted(false)
+    // }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     if (name === '' || email === '' || password === '') {
+    //         setError(true)
+    //     } else {
+    //         setSubmitted(true)
+    //         setError(false);
+    //     }
+    // }
+    // //show success message
+    // const successMessage = () => {
+    //     return (
+    //         <div className='success'
+    //             style={{
+    //                 display: submitted ? '' : 'none'
+    //             }}>
+    //             <h5>Welcome {name}, you have successfully SignUp.</h5>
+    //         </div>
+    //     )
+    // }
+    // //show error message
+    // const errorMessage = () => {
+    //     return (
+    //         <div className='error'
+    //             style={{ display: error ? '' : 'none' }}>
+    //             <h5>Please, fill in all the fields.</h5>
+    //         </div>
+    //     )
+    // }
 
     return (
         <Fragment>
-            <form action="/login" method='post' style={{ padding: '3rem' }} onSubmit={handleSignup}>
+            <form action="/login" method='post' style={{ padding: '3rem' }}>
                 <Header>
                     <div className='messages'>
-                        {successMessage()}
-                        {errorMessage()}
+                        {/* {successMessage()}
+                        {errorMessage()} */}
                     </div>
                     <div className='input_field' >
-                        <TextField id="outlined-basic" label="FullName" variant="outlined" style={{ width: '20rem', height: '4vh', margin: '6rem 3rem 1rem 3rem', borderRadius: '8px' }} value={name} type='name' placeholder='Name' onChange={handleName} />
+                        <TextField id="outlined-basic" label="FullName" variant="outlined" style={{ width: '20rem', height: '4vh', margin: '6rem 3rem 1rem 3rem', borderRadius: '8px' }} type='name' placeholder='Name' />
                     </div>
                     <div>
-                        <TextField id="outlined-basic" label="Email" variant="outlined" style={{ width: '20rem', height: '4vh', margin: '2rem 3rem 1rem 3rem', borderRadius: '8px' }} value={email} type="text" InputProps={{ endAdornment: (<MailIcon />) }} onChange={handleEmail} />
+                        <TextField id="outlined-basic" label="Email" variant="outlined" style={{ width: '20rem', height: '4vh', margin: '2rem 3rem 1rem 3rem', borderRadius: '8px' }} type="text" InputProps={{ endAdornment: (<MailIcon />) }} />
                     </div>
                     <div>
-                        <TextField id="outlined-basic" label="Password" variant="outlined" style={{ width: '20rem', height: '4vh', margin: '2rem 3rem 1rem 3rem', borderRadius: '7px' }} value={password} type="password" InputProps={{ endAdornment: (<LockIcon />) }} onChange={handlePassword} />
+                        <TextField id="outlined-basic" label="Password" variant="outlined" style={{ width: '20rem', height: '4vh', margin: '2rem 3rem 1rem 3rem', borderRadius: '7px' }} type="password" InputProps={{ endAdornment: (<LockIcon />) }} />
                     </div>
 
                     <div>
-                        <Link to='/login' onClick={handleSubmit} style={{ textDecoration: 'none' }}><h3 style={{ marginLeft: '12rem' }}>SignUp</h3></Link>
+                        <Link to='/login' style={{ textDecoration: 'none' }}><h3 style={{ marginLeft: '12rem' }}>SignUp</h3></Link>
                     </div>
 
 
